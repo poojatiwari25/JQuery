@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+.container {
+	height: 290px;
+    width: 400px;
+	border:1px solid black;
+	margin-top: 100px;
+	border-radius: 20px;
+}
+#num1 {
+    margin-top: -27px;
+    margin-left: -50px;
+    height: 30px;
+    width: 80px;
+    font-size: 16px;
+}
+#num2 {
+    margin-left: -50px;
+    margin-top: -28px;
+    height: 30px;
+    width: 80px;
+    font-size: 16px;
+}
+label {
+    margin-left: -240px;
+    margin-top: 7px;
+}
+#b1,#b2,#b3,#b4 {
+    width: 70px;
+    border-radius: 5px;
+    background: black;
+    font-size: 20px;
+    color: white;
+    height: 35px;
+    font-weight: 1000;
+    border: none;
+    font-size: 20px;
+}
+#total {
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    font-size: 25px;
+    padding-top: 7px;
+}
+
+</style>
+</head>
+<body>
+<center>
+<div class="container">
+<h2>Calculator</h2>
+<input type="number" id="total" class="form-control" placeholder="0" readonly><br>
+<label>Enter number:</label>
+<input type="number" id="num1" class="form-control" placeholder="0"><br>
+<label>Enter number:</label>
+<input type="number" id="num2" class="form-control" placeholder="0"><br>
+<button id="b1">+</button>
+<button id="b2">-</button>
+<button id="b3">*</button>
+<button id="b4">/</button>
+</div>
+</center>
+<script>
+$(document).ready(function () {
+$("#b1").click(function () {
+        var a = parseInt($("#num1").val());
+        var b = parseInt($("#num2").val());
+        var c = a + b;
+        $("#total").val(c);
+});
+$("#b2").click(function () {
+        var a = parseInt($("#num1").val());
+        var b = parseInt($("#num2").val());
+        var c = a - b;
+        $("#total").val(c);
+});
+$("#b3").click(function () {
+        var a = parseInt($("#num1").val());
+        var b = parseInt($("#num2").val());
+        var c = a * b;
+        $("#total").val(c);
+});
+$("#b4").click(function () {
+        var a = parseInt($("#num1").val());
+        var b = parseInt($("#num2").val());
+        var c = a / b;
+        $("#total").val(c);
+});   
+})
+</script>
+</body>
+</html>
