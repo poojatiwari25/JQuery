@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: auto;
+        }
+        .container {
+            height: 383px;
+            width: 351px;
+            border: 1px solid black;
+            margin-top: 100px;
+            border-radius: 20px;
+        }
+        input[type=number] {
+            height: 25px;
+            width: 80px;
+        }
+        label {
+            margin-left: -221px;
+        }
+        #num1, #num2, #num3, #num4, #num5 {
+            height: 25px;
+            margin-top: -28px;
+            margin-left: -40px;
+            width: 80px;
+        }
+        #b1 {
+            width: 200px;
+            background: black;
+            color: white;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+        .progress {
+            margin-top: 20px;
+            height: 30px;
+        }
+        .progress-bar {
+            text-align: center; 
+            line-height: 30px; 
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h3>Percentage Calculator</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <span class="progress-text">0%</span> 
+                </div>
+            </div>
+            <label>Enter marks:</label>
+            <input type="number" id="num1" class="form-control" placeholder="Phy"><br>
+            <label>Enter marks:</label>
+            <input type="number" id="num2" class="form-control" placeholder="Chem"><br>
+            <label>Enter marks:</label>
+            <input type="number" id="num3" class="form-control" placeholder="Maths"><br>
+            <label>Enter marks:</label>
+            <input type="number" id="num4" class="form-control" placeholder="Bio"><br>
+            <label>Enter marks:</label>
+            <input type="number" id="num5" class="form-control" placeholder="Eng"><br>
+            <button id="b1">Get Result</button>
+        </div>
+    </center>
+
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                var a = parseInt($("#num1").val() || 0);
+                var b = parseInt($("#num2").val() || 0);
+                var c = parseInt($("#num3").val() || 0);
+                var d = parseInt($("#num4").val() || 0);
+                var e = parseInt($("#num5").val() || 0);
+                var t = a + b + c + d + e;
+                var percentage = (t / 5.0);
+
+                $("#percent").val(percentage.toFixed(2));
+                $(".progress-bar").css("width", percentage + "%").attr("aria-valuenow", percentage);
+                $(".progress-bar .progress-text").text(percentage.toFixed(2) + "%"); 
+            });
+        });
+    </script>
+</body>
+</html>
