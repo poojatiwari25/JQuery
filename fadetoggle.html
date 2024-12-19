@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeToggleBtn").click(function()
+            {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(5000);
+            }); 
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="fadeToggleBtn">FadeToggle</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;"></div>
+    
+</body>
+</html>

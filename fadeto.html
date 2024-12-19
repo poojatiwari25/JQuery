@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeToBtn").click(function()
+            {
+                $("#div1").fadeTo("slow",0.5);
+                $("#div2").fadeTo("slow",0.9);
+                $("#div3").fadeTo("slow",1.5);
+            }); 
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="fadeToBtn">FadeTo</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;"></div>
+    
+</body>
+</html>

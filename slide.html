@@ -6,30 +6,30 @@
     <script>
         $(document).ready(function()
         {
-            $("#slideBtn").click(function()
+            $("#Btn").click(function()
             {
-                $("#slideUp").slideUp(9000);
+                $("#Down").slideDown(9000);
             });
         });
     </script>
     <style type="text/css">
-        #slideBtn,#slideUp
+        #Btn,#Down
         {
             padding: 5px;
             background-color: red;
             border: 1px solid blue;
             text-align: center;
         }
-        #slideUp
+        #Down
         {
             padding: 50px;
-            
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div id="slideBtn">Slide Up</div>
-    <div id="slideUp">Hello</div>
+    <div id="Btn">Slide Down</div>
+    <div id="Down">Hello</div>
     
 </body>
 </html>

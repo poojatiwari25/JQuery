@@ -8,19 +8,25 @@
         {
             $("#slideBtn").click(function()
             {
-                $("#slideUp").slideUp(9000);
+                $("#slideToggle").slideToggle(9000);
             });
+            $("#stop_btn").click(function()
+            {
+                $("#slideToggle").stop();
+            });
+            
+
         });
     </script>
     <style type="text/css">
-        #slideBtn,#slideUp
+        #slideBtn,#slideToggle
         {
             padding: 5px;
             background-color: red;
             border: 1px solid blue;
             text-align: center;
         }
-        #slideUp
+        #slideToggle
         {
             padding: 50px;
             
@@ -28,8 +34,9 @@
     </style>
 </head>
 <body>
-    <div id="slideBtn">Slide Up</div>
-    <div id="slideUp">Hello</div>
+    <center><button id="stop_btn">Stop</button> </center>
+    <div id="slideBtn">Slide Toggle</div>
+    <div id="slideToggle">Hello</div>
     
 </body>
 </html>

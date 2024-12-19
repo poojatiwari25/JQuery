@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                var Div=$("#testing");
+                Div.animate({
+                    left:'300px',
+                },9000);
+                Div.animate({
+                    fontSize:'50px',
+                });               
+
+            });
+        });
+    </script>    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;">
+        Hello
+    </div>    
+</body>
+</html>
