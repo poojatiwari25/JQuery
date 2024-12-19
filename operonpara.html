@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<p class="p2">this is a para</p>
+<p class="p">this is a para</p>
+<p id="p1">this is a para</p>
+<p>this is a para</p>
+<p class="p2">this is a para</p>
+<p class="p2">this is a para</p>
+<button id="b1">Hide all paragraphs</button>
+<button id="b2">Hide by Id</button>
+<button id="b3">Hide by class</button>
+<script>
+$(document).ready(function () {
+	$('#b1').click(function() {
+		$("p").hide();
+	});
+	$('#b2').click(function() {
+		$("#p1").hide();
+	});
+	$('#b3').click(function() {
+		$(".p2").hide();
+	});
+	$('p').click(function() {
+		$("this").hide();
+	});
+})
+</script>
+</body>
+</html>

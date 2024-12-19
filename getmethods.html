@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div><p>this is para under div</p></div>
+<input type="text"/>
+<button id="b1">get text</button>
+<button id="b2">get html</button>
+<button id="b3">get value</button>
+<script>
+$(document).ready(function () {
+	$('#b1').click(function () {
+		var t = $("div").text();
+		alert(t);
+	});
+	$('#b2').click(function () {
+		var t = $("div").html();
+		alert(t);
+	});
+	$('#b3').click(function () {
+		var t = $("input").val();
+		alert(t);
+	});
+})
+</script>
+</body>
+</html>

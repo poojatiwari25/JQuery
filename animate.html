@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="b1">Animate</button>
+<div style="background-color: black;position: absolute; height: 100px;width: 100px;"></div>
+<script>
+$(document).ready(function () {
+	$('#b1').click(function () {
+		$("div").animate({left:'250px'},5000);
+		$("div").animate({height:'250px'},5000);
+		$("div").animate({width:'250px'},5000);
+		$("div").animate({height:'100px'},5000);
+		$("div").animate({width:'100px'},5000);
+		$("div").animate({left:'10px'},5000);
+
+	});
+});
+</script>
+<!-- <script>
+$(document).ready(function () {
+	$('#b1').click(function () {
+		$("div").animate({left:'250px'},5000).animate({height:'250px'},5000).animate({width:'250px'},5000).animate({height:'100px'},5000).animate({width:'100px'},5000).animate({left:'10px'},5000);
+	});
+});
+</script> -->
+</body>
+</html>

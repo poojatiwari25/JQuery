@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="b1">Animate</button>
+<div style="height: 100px;width: 100px;background-color: black;color: white;">hello allllllllllllllll</div>
+<script>
+$(document).ready(function () {
+	$('#b1').click(function () {
+		$("div ").hide(5000,function(){
+			alert('hidden');
+		})
+	})
+})
+</script>
+</body>
+</html>

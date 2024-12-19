@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div></div>
+<input type="text"/>
+<button id="b1">set text</button>
+<button id="b2">set text</button>
+<button id="b3">set html</button>
+<button id="b4">set value</button>
+<script>
+$(document).ready(function () {
+      $('#b1').click(function () {
+      	$("div").text('This is text by jquery');
+      });
+      $('#b2').click(function () {
+      	$("div").text('<h1>This is text by jquery</h1>');
+      });
+      $('#b3').click(function () {
+      	$("div").html('<h1>This is text by jquery</h1>');
+      });
+      $('#b4').click(function () {
+      	$("input").val('programmers point');
+      });
+})
+</script>
+</body>
+</html>

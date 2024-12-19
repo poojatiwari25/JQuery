@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<p>this is para</p>
+<button id="b1">paragraphs</button>
+<button id="b2">stop</button>
+<script>
+$(document).ready(function() {
+	$('#b1').click(function() {
+		$('p').toggle(5000);
+	});
+	$('#b2').click(function (){
+		$('p').stop();
+	})
+})
+</script>
+</body>
+</html>
